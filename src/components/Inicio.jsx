@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import PropTypes from 'prop-types';
 import Error from './Error'
 
 const Inicio = ({ guardarPresupuesto, guardarRestante, actualiarInicio }) => {
@@ -53,6 +54,12 @@ const Inicio = ({ guardarPresupuesto, guardarRestante, actualiarInicio }) => {
             </form>
         </Fragment>
      );
+}
+
+Inicio.propTypes = {
+    guardarPresupuesto: PropTypes.func.isRequired,
+    guardarRestante: PropTypes.func.isRequired,
+    actualiarInicio: PropTypes.func.isRequired
 }
  
 export default Inicio;
